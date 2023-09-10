@@ -1,8 +1,8 @@
-class Data {
+class Meals {
   String? name, image;
   Extras? extras;
   List<Burger>? burgerList;
-  Data(Map map) {
+  Meals(Map map) {
     this.name = map['name'];
     this.image = map['image'];
     burgerList = [];
@@ -34,11 +34,6 @@ class Bread {
     this.price = map['price'];
     this.size = map['size'];
   }
-  @override
-  String toString() {
-    // TODO: implement toString
-    return 'size : $size , price : $price';
-  }
 }
 
 class Cheese {
@@ -46,11 +41,6 @@ class Cheese {
   Cheese(Map<String, String> map) {
     this.price = map['price'];
     this.quantity = map['quantity'];
-  }
-  @override
-  String toString() {
-    // TODO: implement toString
-    return 'quantity : $quantity , price : $price';
   }
 }
 
@@ -65,10 +55,5 @@ class Burger {
     this.currency = map['currency'];
     this.additionals =
         map['checkenBurger'] != null ? map['checkenBurger'] : map['beefburger'];
-  }
-  @override
-  String toString() {
-    // TODO: implement toString
-    return 'name : $name , price : $price ,currency : $currency,addtional : $additionals ';
   }
 }
